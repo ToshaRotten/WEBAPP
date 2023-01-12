@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <main>
+            <h1>Регистрация</h1>
+                <form name="sign_up" onsubmit="return Validation()">
+                    <input type="text" placeholder="Имя" name="first">
+                    <input type="text" placeholder="Фамилия" name="last">
+                    <input type="text" placeholder="Email" name="email">
+                    <input type="password" placeholder="Пароль" name="password">
+                    <input type="password" placeholder="Подтверждение пароля" name="confirm">
+                    <input type="date" name="birthday">
+                    <div id="wrong" style="display: none;"></div>
+                    <button type="submit">Отправить</button>
+                </form>
+            <p onclick="showPass()"> Показать пароль</p>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
