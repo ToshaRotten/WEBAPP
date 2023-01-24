@@ -45,6 +45,9 @@ func (s *Server) ConfigureServer(path string) (*Server, error) {
 }
 
 func (s *Server) ConfigureLogger() *logrus.Logger {
+	s.Logger.Formatter = &logrus.TextFormatter{
+		ForceColors: true,
+	}
 	s.Logger = logrus.New()
 	s.Logger.Level = logrus.Level(s.Config.Server.LogLevel)
 	s.Logger.Trace("Logger is configurated")
